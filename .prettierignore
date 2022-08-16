@@ -1,0 +1,7 @@
+coverage/
+package-lock.json
+babel.config.js
+.vscode/
+.expo/
+.expo-shared/
+app.json
