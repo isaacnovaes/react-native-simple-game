@@ -6,22 +6,6 @@ interface PrimaryButtonProps {
     style?: Record<string, string | number>;
 }
 
-const PrimaryButton = (props: PrimaryButtonProps) => {
-    return (
-        <View style={[styles.buttonStyle, props.style]}>
-            <Pressable
-                onPress={props.onPressButton}
-                android_ripple={{
-                    color: '#640233',
-                }}
-                style={({ pressed }) => pressed && styles.pressed}
-            >
-                <Text style={styles.buttonText}>{props.text}</Text>
-            </Pressable>
-        </View>
-    );
-};
-
 const styles = StyleSheet.create({
     buttonStyle: {
         backgroundColor: '#72063c',
@@ -39,5 +23,21 @@ const styles = StyleSheet.create({
         opacity: 0.75,
     },
 });
+
+const PrimaryButton = (props: PrimaryButtonProps) => {
+    return (
+        <View style={[styles.buttonStyle, props.style]}>
+            <Pressable
+                onPress={props.onPressButton}
+                android_ripple={{
+                    color: '#640233',
+                }}
+                style={({ pressed }) => pressed && styles.pressed}
+            >
+                <Text style={styles.buttonText}>{props.text}</Text>
+            </Pressable>
+        </View>
+    );
+};
 
 export default PrimaryButton;

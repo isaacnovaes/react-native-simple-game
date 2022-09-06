@@ -4,6 +4,36 @@ import PrimaryButton from '../components/PrimaryButton/PrimaryButton';
 import { useAppDispatch } from '../store/hooks';
 import { getUserNumber } from '../store/userNumber/userNumber-slice';
 
+const styles = StyleSheet.create({
+    inputContainer: {
+        alignItems: 'center',
+        marginTop: 100,
+        marginHorizontal: 20,
+        padding: 20,
+        borderRadius: 10,
+        backgroundColor: '#3b021f',
+        elevation: 10,
+        shadowColor: 'black',
+        shadowOffset: { width: 2, height: 2 },
+        shadowRadius: 6,
+        shadowOpacity: 0.8,
+    },
+    textInput: {
+        textAlign: 'center',
+        width: 100,
+        height: 50,
+        fontSize: 32,
+        borderBottomColor: '#DDB52F',
+        borderBottomWidth: 2,
+        color: '#DDB52F',
+        marginVertical: 8,
+        fontWeight: 'bold',
+    },
+    buttonsContainer: {
+        flexDirection: 'row',
+    },
+});
+
 const StartGame = () => {
     const [numberInput, setNumberInput] = useState('');
     const dispatch = useAppDispatch();
@@ -46,35 +76,5 @@ const StartGame = () => {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    inputContainer: {
-        alignItems: 'center',
-        marginTop: 100,
-        marginHorizontal: 20,
-        padding: 20,
-        backgroundColor: '#3b021f',
-        borderRadius: 10,
-        elevation: 10,
-        shadowColor: 'black',
-        shadowOffset: { width: 2, height: 2 },
-        shadowRadius: 6,
-        shadowOpacity: 0.8,
-    },
-    textInput: {
-        textAlign: 'center',
-        width: 100,
-        height: 50,
-        fontSize: 32,
-        borderBottomColor: '#DDB52F',
-        borderBottomWidth: 2,
-        color: '#DDB52F',
-        marginVertical: 8,
-        fontWeight: 'bold',
-    },
-    buttonsContainer: {
-        flexDirection: 'row',
-    },
-});
 
 export default StartGame;
