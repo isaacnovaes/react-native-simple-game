@@ -61,18 +61,13 @@ module.exports = {
         '@typescript-eslint/no-redundant-type-constituents': 'warn',
         '@typescript-eslint/no-useless-empty-export': 'warn',
         'no-redeclare': 'off',
-        '@typescript-eslint/no-redeclare': ['error'], // overwrite base no-redeclare eslint
+        '@typescript-eslint/no-redeclare': 'warn', // overwrite base no-redeclare eslint
         'no-shadow': ['error', { hoist: 'all' }],
         '@typescript-eslint/no-shadow': ['error', { hoist: 'all' }], // overwrite base no-shadow eslint
         'no-unused-expressions': 'off',
-        '@typescript-eslint/no-unused-expressions': ['error'], // overwrite base no-unused-expressions eslint
-        'no-use-before-define': 'off', // for StyleSheet in react native
-        '@typescript-eslint/no-use-before-define': [
-            'error',
-            {
-                variables: false,
-            },
-        ], // overwrite base no-use-before-define eslint, for StyleSheet in react native
+        '@typescript-eslint/no-unused-expressions': 'warn', // overwrite base no-unused-expressions eslint
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': 'warn', // overwrite base no-use-before-define eslint
         'react/boolean-prop-naming': ['error', { validateNested: true }],
         'react/button-has-type': 'warn',
         'react/no-array-index-key': 'warn',
