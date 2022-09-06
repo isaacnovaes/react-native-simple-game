@@ -4,5 +4,6 @@
         "strict": true,
         "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true
-    }
+    },
+    "include": [".", "./import-png.d.ts"]
 }
