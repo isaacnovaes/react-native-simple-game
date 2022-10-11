@@ -1,5 +1,5 @@
 import { View, Text, Pressable, StyleSheet } from 'react-native';
-import color from '../constants/colors';
+import { Color } from '../constants/colors';
 
 interface PrimaryButtonProps {
     text: string;
@@ -9,7 +9,7 @@ interface PrimaryButtonProps {
 
 const styles = StyleSheet.create({
     buttonStyle: {
-        backgroundColor: color.bordo700,
+        backgroundColor: Color.bordo700,
         borderRadius: 10,
         overflow: 'hidden',
         margin: 4,
@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     buttonText: {
         color: 'white',
         textAlign: 'center',
+        fontFamily: 'OpenSansRegular',
         paddingVertical: 8,
     },
     pressed: {
@@ -31,7 +32,7 @@ const PrimaryButton = (props: PrimaryButtonProps) => {
             <Pressable
                 onPress={props.onPressButton}
                 android_ripple={{
-                    color: color.bordo600,
+                    color: Color.bordo600,
                 }}
                 style={({ pressed }) => pressed && styles.pressed}
             >
