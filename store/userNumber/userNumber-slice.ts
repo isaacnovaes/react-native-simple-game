@@ -14,7 +14,7 @@ export const counterSlice = createSlice({
     name: 'userNumber',
     initialState,
     reducers: {
-        getUserNumber(state, action: PayloadAction<number>) {
+        getUserNumber(state, action: PayloadAction<number | null>) {
             state.userNumber = action.payload;
         },
     },

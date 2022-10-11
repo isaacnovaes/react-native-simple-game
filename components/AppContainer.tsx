@@ -4,7 +4,9 @@ import { StyleSheet, ImageBackground } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import GameScreen from '../screens/GameScreen';
 import bgImage from '../assets/images/app-background.png';
-import colors from '../constants/colors';
+import { Color } from '../constants/colors';
+import GameOver from '../screens/GameOver';
+import { useState } from 'react';
 
 const styles = StyleSheet.create({
     app: {
@@ -18,10 +20,20 @@ const styles = StyleSheet.create({
 const AppContainer = () => {
     const userNumber = useAppSelector((state) => state.userNumber.userNumber);
 
+    const [isGameOver, setIsGameOver] = useState(false);
+
+    const screen = isGameOver ? (
+        <GameOver setIsGameOver={setIsGameOver} />
+    ) : userNumber === null ? (
+        <StartGame />
+    ) : (
+        <GameScreen setIsGameOver={setIsGameOver} />
+    );
+
     return (
         <LinearGradient
             style={styles.app}
-            colors={[colors.bordo500, colors.yellow]}
+            colors={[Color.bordo500, Color.yellow]}
         >
             <ImageBackground
                 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -30,7 +42,7 @@ const AppContainer = () => {
                 style={styles.app}
                 imageStyle={styles.imageBackground}
             >
-                {userNumber === null ? <StartGame /> : <GameScreen />}
+                {screen}
             </ImageBackground>
         </LinearGradient>
     );
