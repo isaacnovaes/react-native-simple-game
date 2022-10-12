@@ -11,8 +11,6 @@ export default function App() {
         OpenSansRegular: require('./assets/fonts/OpenSans-Regular.ttf'),
     });
 
-    console.log(fontsLoaded);
-
     if (!fontsLoaded) {
         return null;
     }
