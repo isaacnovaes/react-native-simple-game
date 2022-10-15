@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         padding: 20,
         borderRadius: 10,
+        alignItems: 'center',
     },
     buttonsContainer: {
         flexDirection: 'row',

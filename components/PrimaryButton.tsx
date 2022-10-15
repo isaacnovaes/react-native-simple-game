@@ -5,6 +5,7 @@ interface PrimaryButtonProps {
     text: string;
     onPressButton?: () => void;
     style?: Record<string, string | number>;
+    textStyle?: Record<string, string | number>;
 }
 
 const styles = StyleSheet.create({
@@ -36,7 +37,9 @@ const PrimaryButton = (props: PrimaryButtonProps) => {
                 }}
                 style={({ pressed }) => pressed && styles.pressed}
             >
-                <Text style={styles.buttonText}>{props.text}</Text>
+                <Text style={[styles.buttonText, props.textStyle]}>
+                    {props.text}
+                </Text>
             </Pressable>
         </View>
     );

@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     summaryText: {
         fontFamily: 'OpenSansRegular',
         color: Color.white,
-        fontSize: 15,
+        fontSize: 18,
         textAlign: 'center',
     },
     roundsText: {
@@ -64,7 +64,8 @@ const GameOver = (props: {
             <PrimaryButton
                 text='Start New Game'
                 onPressButton={onStartNewGame}
-                style={{ width: 150, marginVertical: 30 }}
+                style={{ width: 150, marginVertical: 30, padding: 5 }}
+                textStyle={{ fontSize: 18 }}
             />
             <View style={styles.summaryContainer}>
                 <Text style={styles.summaryText}>

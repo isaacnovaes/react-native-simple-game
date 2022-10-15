@@ -4,6 +4,7 @@ import { Color } from '../../constants/colors';
 const styles = StyleSheet.create({
     container: {
         borderWidth: 4,
+        width: 250,
         borderColor: Color.yellow,
         padding: 24,
         borderRadius: 8,
